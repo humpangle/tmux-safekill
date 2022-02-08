@@ -27,7 +27,7 @@ function safe_end_procs {
     pane_id=$(echo "$pane_set" | awk -F " " '{print $1}')
     pane_proc=$(echo "$pane_set" | awk -F " " '{print tolower($2)}')
     cmd="C-c"
-    if [[ "$pane_proc" == "vi" ]] || [[ "$pane_proc" == "vim" ]] || [[ "$pane_proc" == "nvim" ]]; then
+    if [[ "$pane_proc" == "vi" ]] || [[ "$pane_proc" == "vim" ]] || [[ "$pane_proc" == "nvim" ]] || [[ "$pane_proc" == "vifm" ]]; then
       cmd=$([[ $envcfg_use_forcequit_approach == 1 ]] && echo 'Escape ":qa!" Enter' || echo 'Escape ":qa" Enter')
     elif [[ "$pane_proc" == "man" ]] || [[ "$pane_proc" == "less" ]]; then
       cmd='"q"'
