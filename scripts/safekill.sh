@@ -32,7 +32,7 @@ function safe_end_procs {
     elif [[ "$pane_proc" == "man" ]] || [[ "$pane_proc" == "less" ]]; then
       cmd='"q"'
     elif [[ "$pane_proc" == "bash" ]] || [[ "$pane_proc" == "zsh" ]] || [[ "$pane_proc" == "fish" ]]; then
-      cmd='C-c C-u space "exit" Enter'
+      # cmd='C-c C-u space "exit" Enter'
     elif [[ "$pane_proc" == "ssh" ]] || [[ "$pane_proc" == "vagrant" ]]; then
       cmd='Enter "~."'
     elif [[ "$pane_proc" == "psql" ]] || [[ "$pane_proc" == "mysql" ]]; then
